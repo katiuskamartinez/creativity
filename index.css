@@ -201,3 +201,17 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.galleryy-grid-video {
+  display: flex;
+}
+@media screen and (max-width: 550px) {
+  .hero-content {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    transform: translate(-30%, -1%);
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+  }
+}
