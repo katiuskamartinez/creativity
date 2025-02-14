@@ -1,0 +1,203 @@
+/* Reset y Estilos Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Efecto Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.3s;
+  mix-blend-mode: difference;
+  z-index: 999;
+}
+
+.cursor-trail {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 998;
+}
+
+/* Animaciones */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+  }
+
+  100% {
+    text-shadow: 4px 4px #ff00ff, -4px -4px #00ffff;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Sección Hero */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #000, #1a1a1a);
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: glitch 1s infinite alternate;
+  text-transform: uppercase;
+}
+
+/* Sección Perfil */
+.profile {
+  padding: 8rem 2rem;
+  position: relative;
+  background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.4"/></svg>');
+}
+
+.tool-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.galleryy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.galleryy-item {
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Galería Reels */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.reel-item {
+  position: relative;
+  aspect-ratio: 9/16;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background: #000;
+  max-width: 400px; /* Más compacto */
+}
+
+.reel-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.reel-item:hover {
+  transform: scale(1.05);
+}
+
+.reel-item:hover video {
+  transform: scale(1.1);
+}
+
+/* Efecto Holográfico */
+.holographic-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-effect::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 255, 0.1) 0%,
+    rgba(0, 255, 255, 0.1) 50%,
+    rgba(255, 0, 255, 0.1) 100%
+  );
+  animation: rotate 4s linear infinite;
+  mix-blend-mode: overlay;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

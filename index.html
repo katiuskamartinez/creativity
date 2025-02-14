@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creaciones con IA</title>
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+  <!-- Cursor Personalizado -->
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+
+  <!-- Hero Section -->
+  <section class="hero holographic-effect">
+    <video class="hero-video" autoplay muted loop>
+      <source src="tu-video-hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>IA Generativa</h1>
+      <p>El futuro de la creación digital</p>
+    </div>
+  </section>
+
+  <!-- Sección Perfil -->
+  <section class="profile">
+    <div class="container">
+      <h2 class="holographic-effect">Creador Digital</h2>
+      <p>Especialista en inteligencia artificial generativa...</p>
+
+      <div class="tools-grid">
+        <div class="tool-card">Runway ML</div>
+        <div class="tool-card">Ideogram</div>
+        <div class="tool-card">DALL-E 3</div>
+        <div class="tool-card">Replicate</div>
+        <div class="tool-card">Fliki</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería Reels -->
+  <section class="gallery">
+    <div class="container">
+      <h2>Reels con IA</h2>
+      <div class="gallery-grid">
+        <div class="reel-item">
+          <video muted loop controls>
+            <source src="./assets/trivia-mitolgica-fusionada-con-tecnologa-moderna.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="reel-item">
+          <video muted loop controls>
+            <source src="./assets/trivia-crees-que-lo-sabes-todo-sobre-el-reino-animal.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- Agrega más reels -->
+        <div class="reel-item">
+          <video muted loop controls>
+            <source src="./assets/downloadedImage (5)_animation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="reel-item">
+          <video muted loop controls>
+            <source src="./assets/vidu-1-general-4-2024-08-19T21_35_10Z.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="galleryy-grid">
+        <!-- Agrega tus imágenes/videos aquí -->
+        <div class="galleryy-item"
+          style="background-image: url('./assets/an-abstract-visualization-of-artificial-intelligen-qSLwey1ESqy8NQreJfXRJA-xdPec8LRSISrPlo1e_psnw.jpeg')">
+        </div>
+        <div class="galleryy-item"
+          style="background-image: url('./assets/a-surreal-digital-landscape-where-giant-social-med-BBJUpfgySJGncHyLOtOdaw-ITu6khgRTEqAUsZp6sPY_w.jpeg')">
+        </div>
+        <div class="galleryy-item" style="background-image: url('./assets/downloadedImage\ \(25\).png')"></div>
+      </div>
+      <div class="galleryy-grid">
+        <!-- Agrega tus imágenes/videos aquí -->
+        <div class="galleryy-item"
+          style="background-image: url('./assets/a-cinematic-3d-render-of-an-abstract-scene.jpeg')">
+        </div>
+        <div class="galleryy-item" style="background-image: url('./assets/downloadedImage\ \(30\).png')">
+        </div>
+        <div class="galleryy-item" style="background-image: url('./assets/downloadedImage\ \(3\).png')"></div>
+      </div>
+      <div class="galleryy-grid">
+        <!-- Ejemplo con video -->
+        <video class="galleryy-item" autoplay muted loop>
+          <source src="./assets/Gen-3 Alpha Turbo 1960381297, FPV spheres floatin, creacion de contenid, M 5.mp4"
+            type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animación del cursor
+    const cursor = document.querySelector('.cursor');
+    const trail = document.querySelector('.cursor-trail');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+
+      setTimeout(() => {
+        trail.style.left = e.clientX + 'px';
+        trail.style.top = e.clientY + 'px';
+      }, 50);
+    });
+
+    // Efecto hover
+    document.querySelectorAll('a, button, .tool-card').forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'scale(1.5)';
+        trail.style.transform = 'scale(2)';
+      });
+      element.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'scale(1)';
+        trail.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+</body>
+
+</html>
