@@ -70,22 +70,28 @@
       </div>
       <div class="galleryy-grid">
         <!-- Agrega tus imágenes/videos aquí -->
-        <div class="galleryy-item"
-          style="background-image: url('./assets/an-abstract-visualization-of-artificial-intelligen-qSLwey1ESqy8NQreJfXRJA-xdPec8LRSISrPlo1e_psnw.jpeg')">
-        </div>
-        <div class="galleryy-item"
-          style="background-image: url('./assets/a-surreal-digital-landscape-where-giant-social-med-BBJUpfgySJGncHyLOtOdaw-ITu6khgRTEqAUsZp6sPY_w.jpeg')">
-        </div>
-        <div class="galleryy-item" style="background-image: url('./assets/downloadedImage\ \(25\).png')"></div>
       </div>
       <div class="galleryy-grid">
-        <!-- Agrega tus imágenes/videos aquí -->
-        <div class="galleryy-item"
-          style="background-image: url('./assets/a-cinematic-3d-render-of-an-abstract-scene.jpeg')">
+        <!-- Carrusel de Imágenes -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <div class="carousel-track">
+            <div class="carousel-slide"
+              style="background-image: url('./assets/an-abstract-visualization-of-artificial-intelligen-qSLwey1ESqy8NQreJfXRJA-xdPec8LRSISrPlo1e_psnw.jpeg')">
+            </div>
+            <div class="carousel-slide"
+              style="background-image: url('./assets/a-surreal-digital-landscape-where-giant-social-med-BBJUpfgySJGncHyLOtOdaw-ITu6khgRTEqAUsZp6sPY_w.jpeg')">
+            </div>
+            <div class="carousel-slide" style="background-image: url('./assets/downloadedImage (25).png')"></div>
+            <div class="carousel-slide"
+              style="background-image: url('./assets/a-cinematic-3d-render-of-an-abstract-scene.jpeg')">
+            </div>
+            <div class="carousel-slide" style="background-image: url('./assets/downloadedImage (30).png')">
+            </div>
+            <div class="carousel-slide" style="background-image: url('./assets/downloadedImage (3).png')"></div>
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
         </div>
-        <div class="galleryy-item" style="background-image: url('./assets/downloadedImage\ \(30\).png')">
-        </div>
-        <div class="galleryy-item" style="background-image: url('./assets/downloadedImage\ \(3\).png')"></div>
       </div>
       <div class="galleryy-grid-video">
         <!-- Ejemplo con video -->
@@ -94,6 +100,8 @@
             type="video/mp4">
         </video>
       </div>
+    </div>
+    <div>
     </div>
   </section>
 
@@ -123,6 +131,32 @@
         trail.style.transform = 'scale(1)';
       });
     });
+
+    // Carrusel Futurista
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    });
+
+    // Auto-slide
+    setInterval(() => {
+      nextBtn.click();
+    }, 4000);
   </script>
 </body>
 
