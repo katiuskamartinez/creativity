@@ -94,6 +94,20 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+.hero-content h1 {
+  color: #00ffe7;
+  text-shadow: 0 0 16px #8f00ff, 0 0 32px #00ffe7;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  color: #b2f7ef;
+  text-shadow: 0 0 8px #00ffe7;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
