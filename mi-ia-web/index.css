@@ -222,7 +222,7 @@ body {
   overflow: hidden;
   transition: transform 0.3s;
   background: #000;
-  max-width: 400px; /* Más compacto */
+  max-width: 400px;
 }
 
 .reel-item video {
@@ -410,4 +410,213 @@ body {
   color: #00ffe7;
   font-size: 1.1rem;
   letter-spacing: 1px;
+}
+
+/* IA GENERATIVA PROMPT */
+
+.container-ia {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 100px;
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.output-section {
+  text-align: left;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.output-section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#responseOutput {
+  color: #fff;
+  font-size: 1.1rem;
+  min-height: 2.5rem;
+}
+
+#responseOutput p {
+  margin: 0;
+  color: #333333;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+#loading {
+  color: #00ffe7;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message {
+  color: #ff4e8a;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.section-ia {
+  margin: 4rem 0 3rem 0;
+  padding: 3rem 1.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(120deg, #181c2b 70%, #00ffe7 100%);
+  box-shadow: 0 8px 40px 0 rgba(0, 255, 231, 0.1),
+    0 2px 12px 0 rgba(143, 0, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.container-ia {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-ia h2 {
+  color: #00ffe7;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 0 12px #8f00ff, 0 0 24px #00ffe7;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#promptInput {
+  width: 100%;
+  min-height: 70px;
+  max-width: 500px;
+  border-radius: 1rem;
+  border: 1.5px solid #00ffe7;
+  background: rgba(24, 28, 43, 0.7);
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.1rem;
+  resize: vertical;
+  box-shadow: 0 0 12px #00ffe733;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+#promptInput:focus {
+  border: 1.5px solid #8f00ff;
+  box-shadow: 0 0 24px #8f00ff77;
+}
+
+#generateBtn {
+  background: linear-gradient(90deg, #00ffe7 0%, #8f00ff 100%);
+  color: #181c2b;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.8rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 16px #00ffe7;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#generateBtn:hover {
+  background: linear-gradient(90deg, #8f00ff 0%, #00ffe7 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #8f00ff;
+}
+
+.output-section {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(0, 255, 231, 0.18);
+  border-radius: 1.2rem;
+  padding: 1.5rem 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(0, 255, 231, 0.1);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.output-section h2 {
+  color: #8f00ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+}
+
+#responseOutput {
+  color: #fff;
+  font-size: 1.1rem;
+  min-height: 2.5rem;
+}
+
+#loading {
+  color: #00ffe7;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.error-message {
+  color: #ff4e8a;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }

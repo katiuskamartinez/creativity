@@ -24,7 +24,23 @@
       <p>El futuro de la creación digital</p>
     </div>
   </section>
-
+  <section class="section-ia">
+    <div class="container-ia">
+      <h2>Habla con la IA de Google</h2>
+      <div class="input-section">
+        <textarea id="promptInput" placeholder="Introduce tu pregunta o prompt aquí..."></textarea>
+        <button id="generateBtn">Generar Respuesta</button>
+      </div>
+      <div class="output-section">
+        <h2>Respuesta de la IA:</h2>
+        <div id="responseOutput">
+          <p></p>
+        </div>
+      </div>
+      <div id="loading" class="hidden">Cargando...</div>
+      <div id="error" class="hidden error-message"></div>
+    </div>
+  </section>
   <!-- Sección Perfil -->
   <section class="profile">
     <div class="container">
@@ -126,7 +142,7 @@
       </div>
     </div>
   </section>
-
+  <script src="script.js"></script>
   <script>
     // Animación del cursor
     const cursor = document.querySelector('.cursor');
