@@ -63,7 +63,7 @@ Para que esta aplicación funcione en tu entorno local, necesitarás configurar 
 ### 1. Clona el Repositorio
 
 ```bash
-git clone https://github.com/katiuskamartinez/creativity
+git clone https://github.com/katiuskamartinez/creativity-ia-generativa
 ```
 
 ### 2. Configuración del Backend (Servidor Node.js)
